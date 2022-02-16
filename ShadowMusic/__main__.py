@@ -27,7 +27,7 @@ HELPABLE = {}
 
 async def initiate_bot():
     with console.status(
-        "[magenta] Booting up The ShadowMusic...",
+        "[magenta] Booting up The Osmani Player...",
     ) as status:
         console.print("┌ [red]Clearing MongoDB cache...")
         try:
@@ -78,12 +78,12 @@ async def initiate_bot():
         await asyncio.sleep(2.4)
         await startup_delete_last(_____)
     console.print(
-        "[bold green]Congrats!! ShadowMusic has started successfully!\n"
+        "[bold green]Congrats!! OsmaniPlayer has started successfully!\n"
     )
     try:
         await app.send_message(
             LOG_GROUP_ID,
-            "<b>Congrats!! ShadowMusic has started successfully!</b>",
+            "<b>Congrats!! OsmaniPlayer has started successfully!</b>",
         )
     except Exception as e:
         print(
@@ -108,9 +108,9 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await userbot.join_chat("ShadowBotUpdates")
-        await userbot.join_chat("ShadowSupport_Official")
-        await userbot.join_chat("ShadowBotChat")
+        await userbot.join_chat("osmanibots")
+        await userbot.join_chat("osmanigroupbot")
+        await userbot.join_chat("Osmani_Player_Bot")
     except:
         pass  
       

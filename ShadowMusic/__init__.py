@@ -65,17 +65,17 @@ async def initiate_bot():
     os.system("clear")
     header = Table(show_header=True, header_style="bold yellow")
     header.add_column(
-        "ShadowMusic : The Most Advanced Music Bot"
+        "OsmaniPlayer : The Most Advanced Music Bot"
     )
     console.print(header)
     with console.status(
-        "[magenta] Booting up ShadowMusic...",
+        "[magenta] Booting up OsmaniPlayer...",
     ) as status:
         console.print("┌ [red]Booting Up The Clients...\n")
         await app.start()
         await userbot.start()
         console.print("└ [green]Clients Booted Successfully!")
-        initial = await startup_send_new("Starting ShadowMusic...")
+        initial = await startup_send_new("Starting OsmaniPlayer...")
         await asyncio.sleep(0.5)
         all_over = await startup_send_new("Checking Required Directories...")
         console.print(
@@ -94,7 +94,7 @@ async def initiate_bot():
         await asyncio.sleep(2)
         console.print("\n┌ [red]Checking the existence of Database...")
         if mango == "":
-            status.update(status="[bold red] Failed to boot ShadowMusic!")
+            status.update(status="[bold red] Failed to boot OsmaniPlayer!")
             console.print(
                 "[bold yellow]\nWARNING! DATABASE URL NOT FOUND!!\n\nExiting all processes with SIGTERM..."
             )
@@ -104,7 +104,7 @@ async def initiate_bot():
         await asyncio.sleep(0.7)
         console.print("├ [yellow]Validating Database...")
         if not mango.endswith("=majority"):
-            status.update(status="[bold red] Failed to boot ShadowMusic!")
+            status.update(status="[bold red] Failed to boot OsmaniPlayer!")
             console.print(
                 "[bold yellow]\nWARNING! INVALID DATABASE URL! USE ONLY MONGO DB URL!!\n\nExiting all processes with SIGTERM..."
             )
@@ -112,7 +112,7 @@ async def initiate_bot():
         try:
             smex = MongoClient(mango, port=27017)
         except:
-            status.update(status="[bold red] Failed to boot ShadowMusic!")
+            status.update(status="[bold red] Failed to boot OsmaniPlayer!")
             console.print(
                 "[bold yellow] I hate it to say but something is wrong with your database url :(\ntry rechecking it or replace it with a new one.\n\nExiting all processes with SIGTERM..."
             )
